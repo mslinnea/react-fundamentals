@@ -10,9 +10,12 @@
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script type="module">
-      const helloSpan = React.createElement( 'span', { children: 'Hello' } );
-      const worldSpan = React.createElement( 'span', { children: 'World' } );
-      const container = React.createElement( 'div', { className: 'container', children: [ helloSpan, worldSpan ] } );
+      const helloSpan = React.createElement( 'span', { children: 'Hello', key: 1 } );
+      const worldSpan = React.createElement( 'span', { children: 'World', key: 2 } );
+      const container = React.createElement( 'div', {
+          className: 'container',
+          children: [ helloSpan, ' ', worldSpan ]
+      } );
       ReactDOM.render( container,document.getElementById('root') )
   </script>
 </body>
