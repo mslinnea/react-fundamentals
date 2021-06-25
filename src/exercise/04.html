@@ -17,6 +17,12 @@
             </div>
         )
     }
+
+    Message.propTypes = {
+        greeting: PropTypes.string.isRequired,
+        subject: PropTypes.string.isRequired,
+    };
+
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     const element = (
@@ -29,9 +35,5 @@
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
 
-    Message.propTypes = {
-        greeting: PropTypes.string.isRequired,
-        subject: PropTypes.string.isRequired,
-    };
   </script>
 </body>
